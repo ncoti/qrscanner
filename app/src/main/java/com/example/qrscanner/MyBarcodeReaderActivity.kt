@@ -1,13 +1,13 @@
 package com.example.qrscanner
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
+import androidx.appcompat.app.AppCompatActivity
 import com.journeyapps.barcodescanner.CaptureManager
 import kotlinx.android.synthetic.main.activity_my_barcode_reader.*
 
 class MyBarcodeReaderActivity : AppCompatActivity() {
-    private lateinit var  capture: CaptureManager
+
+    private lateinit var capture: CaptureManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +39,7 @@ class MyBarcodeReaderActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         capture.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
