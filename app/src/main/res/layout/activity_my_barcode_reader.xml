@@ -17,5 +17,5 @@
         android:id="@+id/barcodeScanner"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        zxing_scanner_layout="@Layout/custom_barcode_scanner"/>
+        app:zxing_scanner_layout="@layout/custom_barcode_scanner"/>
 </LinearLayout>
